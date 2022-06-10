@@ -1,153 +1,186 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-size: 14px;
-    font-family: sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: sans-serif;
 }
 
-body{
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+}
+
+.ig-container {
+  width: 980px;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ig-phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+}
+
+.ig-phone img {
+  height: 40rem;
+}
+
+.ig-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 330px;
+  min-height: 37rem;
+  margin-left: 50px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid lightgray;
+  padding: 1.4rem 0;
+  margin-bottom: 10px;
+}
+
+.group:nth-child(1) {
+  min-height: 19rem;
+  padding: 3.2rem 0 2rem 0;
+}
+
+.ig-logo {
+  height: 3.5rem;
+}
+
+.profile-photo {
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0 2.5rem 0;
+}
+
+.profile-photo img {
+  height: 5.5rem;
+}
+
+.ig-login {
+  background-color: #0095f6;
+  padding: 7px 9px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.not-account {
+  color: #8e8e8e;
+  padding-bottom: 5px;
+}
+
+.not-account:nth-child(2) {
+  padding-bottom: 0;
+}
+
+.link-blue {
+  color: #0095f6;
+  font-weight: bold;
+}
+
+.download {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.get-app {
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 0;
+}
+
+.app-download {
+  width: 10rem;
+  height: 3rem;
+  background-color: black;
+  border-radius: 5px;
+  background-size: cover;
+  background-image: url('img/apple-button.png');
+}
+
+.app-download:nth-child(2) {
+  background-image: url('img/googleplay-button.png');
+  margin-left: 5px;
+}
+
+/* Configurações do footer */
+
+.footer {
+  flex-direction: column;
+  height: 20vh;
+  width: 1056px;
+}
+
+footer ul {
+  display: flex;
+  align-content: space-between;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+
+ul li {
+  text-decoration: none;
+  list-style: none;
+  color: #8e8e8e;
+  padding-bottom: 30px;
+}
+
+ul li a {
+  display: block;
+  font-size: 12px;
+  padding: 0 10px;
+}
+
+ul li a:visited {
+  color: #8e8e8e;
+}
+
+/* Media queries */
+
+@media (max-width: 768px) {
+  .ig-container {
     justify-content: center;
-    align-items: center;
-    background-color: #fafafa;
+  }
+  .ig-phone {
+    display: none;
+  }
 }
 
-.ig-container{
-    width: 800px;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-.ig-phone{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-}
-
-.ig-phone img{
-    height: 40rem;
-    
-}
-
-.ig-area{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 330px;
-    min-height: 37rem;
-}
-
-.group{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
+@media (max-width: 425px) {
+  body {
     background-color: #fff;
-    border: 1px solid lightgray;
-    padding: 1.4rem 0;
-    margin-bottom: 10px;
-    
-}
+  }
 
-.group:nth-child(1){
-    min-height: 19rem;
-    padding: 3.2rem 0 2rem 0;
-    
-}
-
-.ig-logo{
-    height: 3.5rem;
-}
-
-.profile-photo{
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1.5rem 0 2.5rem 0;
-}
-
-.profile-photo img{
-    height: 5.5rem;
-}
-
-.ig-login{
-    background-color: #0095f6;
-    padding: 7px 9px;
-    border-radius: 5px;
-    color: #fff;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-}
-
-.not-account{
-    color: #8e8e8e;
-    padding-bottom: 5px;
-}
-
-.not-account:nth-child(2){
-    padding-bottom: 0;
-}
-
-.link-blue{
-    color: #0095f6;
-    font-weight: bold;
-}
-
-.download{
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
-   align-items: center;
-   width: 100%; 
-}
-
-.get-app{
-    display: flex;
-    justify-content: space-between;
-    padding: 11px 0;
-}
-
-.app-download{
-    width: 10rem;
-    height: 3rem;
-    background-color: black;
-    border-radius: 5px;
-    background-size: cover;
-    background-image: url('img/apple-button.png');
-}
-
-.app-download:nth-child(2){
-    background-image: url('img/googleplay-button.png');
-    margin-left: 5px;
-}
-
-@media (max-width:768px){
-    .ig-container{
-        justify-content: center;
-    }
-    .ig-phone{
-        display: none;
-    }
-}
-
-@media (max-width:425px){
-    body{
-        background-color: #fff;
-    }
-
-    .group{
-        border: 0px;
-    }
+  .group {
+    border: 0px;
+  }
 }
