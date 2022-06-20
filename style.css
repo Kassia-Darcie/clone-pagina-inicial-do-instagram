@@ -12,13 +12,12 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: #fafafa;
 }
 
 .ig-container {
-  width: 980px;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -26,14 +25,53 @@ body {
 }
 
 .ig-phone {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
+  width: 378px;
+  height: 584px;
+  background-image: url(img/app-demo.png);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-position: -47px 0px;
+  position: relative;
+  margin-right: 40px;
 }
 
 .ig-phone img {
-  height: 40rem;
+    position: absolute;
+    right: 18px;
+    top: 27px;
+    animation-name: imagens;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes imagens {
+  0% {
+    opacity: 1;
+  }
+  22% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
+  89% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ig-phone img:nth-of-type(1) {
+  animation-delay: 0;
+}
+
+.ig-phone img:nth-of-type(2) {
+  animation-delay: 6s;
+}
+.ig-phone img:nth-of-type(3) {
+  animation-delay: 12s;
 }
 
 .ig-area {
@@ -43,7 +81,7 @@ body {
   justify-content: space-between;
   width: 330px;
   min-height: 37rem;
-  margin-left: 50px;
+  
 }
 
 .group {
@@ -133,17 +171,20 @@ body {
 
 /* Configurações do footer */
 
-.footer {
+footer {
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 20vh;
-  width: 1056px;
+  width: 100%;
 }
 
 footer ul {
   display: flex;
-  align-content: space-between;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 
@@ -151,7 +192,8 @@ ul li {
   text-decoration: none;
   list-style: none;
   color: #8e8e8e;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+  flex-shrink: 0;
 }
 
 ul li a {
